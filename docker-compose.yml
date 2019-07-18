@@ -5,7 +5,7 @@ services:
   commonui-sample:
     build:
       context: .
-    image: vertigo-ala/commonui-sample
+    image: vertigoala/commonui-sample
     volumes:
       - ./html:/opt/html
     ports:
