@@ -1,3 +1,12 @@
+FROM node as builder
+
+RUN cd /opt && \
+    git clone --recurse-submodules https://github.com/AtlasOfLivingAustralia/commonui-bs3-2019.git && \
+    cd commonui-bs3-2019 && \
+    git submodule foreach --recursive 'git checkout commonui-bs3-2019' && \
+    yarn install && \
+    ./node_modules/.bin/gulp build
+
 FROM nginx:alpine
 
 # commonui-bs3 ("native" ALA commonui-bs3)
@@ -11,6 +20,10 @@ RUN wget https://github.com/AtlasOfLivingAustralia/commonui-bs2/archive/master.z
     unzip master.zip && \
     mv commonui-bs2-master /usr/share/nginx/html/commonui-bs2 && \
     rm master.zip
+
+# commonui-bs3-2019
+RUN mkdir -p /usr/share/nginx/html/commonui-bs3-2019/
+COPY --from=builder /opt/commonui-bs3-2019/build /usr/share/nginx/html/commonui-bs3-2019/
 
 ADD ./html /usr/share/nginx/html
 
