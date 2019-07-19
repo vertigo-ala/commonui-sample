@@ -1,32 +1,30 @@
 <!-- Navbar start -->
-  <nav class="navbar navbar-default navbar-fixed-top ::authStatusClass::">
-    <div class="container container-navbar">
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid container-navbar">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
+        <button type="button" class="btn btn-navbar nav-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="::centralServer::/">
-          <img alt="Brand" src="::headerFooterServer::/img/ME_Logo_NEW_3.png">
+        <a class="brand" href="::centralServer::/">
+          <img alt="Brand" src="::headerFooterServer::/images/ME_Logo_NEW_3.png">
         </a>
       </div>
 
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <div class="row row-search">
-          <div class="col-xs-12 col-sm-4 col-md-6">
+      <div class="collapse nav-collapse" id="bs-example-navbar-collapse-1">
+        <div class="row-fluid row-search">
+          <div class="span6">
             <form id="global-search" class="banner" action="::searchServer::::searchPath::" method="get" name="search-form">
-              <div class="icon-addon addon-lg">
+              <div class="search-form-icon">
+              <label for="biesearch" rel="tooltip" title="search"><img src="::headerFooterServer::/images/icon-search.png" height="16" width="16" alt="Search" /></label>
                 <input type="text" placeholder="Search the Atlas ..." class="form-control autocomplete" id="biesearch" name="q">
-                <label for="biesearch" class="glyphicon glyphicon-search" rel="tooltip" title="search"></label>
+                
               </div>
             </form>
           </div>
-          <div class="col-md-2 hidden-xs">
-            <ul class="nav navbar-nav navbar-right nav-login">
-              <li>::loginLogoutListItem::</li>
-            </ul>
+
+          <div class="span2 visible-desktop">
             <ul class="nav navbar-nav navbar-right nav-logged-in">
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -41,13 +39,11 @@
                 </ul>
               </li>
             </ul>
-
           </div>
         </div><!-- End row -->
 
         <!-- ALME MARGIN -->
         <ul class="nav navbar-nav" style="margin-left: 80px;">
-          <!-- <li class="active"><a href="#">Home</a></li> -->
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
               Start exploring
@@ -56,7 +52,7 @@
             <ul class="dropdown-menu" role="menu">
               <li><a href="https://lists.ala.org.au/iconic-species">Middle-earth iconic species</a></li>
               <li><a href="https://biocache.ala.org.au/explore/your-area">Explore your area</a></li>
-              <li><a href="https://regions.ala.org.au/">Explore regions</a></li>
+              <li><a href="https://regions.ala.org.au/">Explore your region</a></li>
               <li><a href="https://biocache.ala.org.au/search">Search occurrence records</a></li>
               <li class="divider"></li>
               <li><a href="::centralServer::/sites-and-services/">Sites &amp; services</a></li>
@@ -120,12 +116,14 @@
             </ul>
           </li>
         </ul>
-        <ul class="nav navbar-nav navbar-right visible-xs">
+        <ul class="nav navbar-nav navbar-right hidden-desktop">
           <li><a href="https://auth.ala.org.au/userdetails/myprofile/"><span class="nav-login">View profile</span></a></li>
           <li><a href="https://auth.ala.org.au/userdetails/registration/editAccount"><span class="nav-login">Account settings</span></a></li>
           <li>::loginLogoutListItem::</li>
         </ul>
       </div><!-- /.navbar-collapse -->
-    </div><!-- /.container -->
+    </div><!-- /.container-fluid -->
   </nav>
   <!-- End Navbar -->
+
+<div class="container-fluid ala-contentspacer"><div class="row-fluid"><div class="span12"></div></div></div>

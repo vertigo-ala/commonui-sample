@@ -7,7 +7,7 @@ RUN wget https://github.com/AtlasOfLivingAustralia/commonui-bs3/archive/master.z
     rm master.zip
 
 # commonui-bs2 ("native" ALA commonui-bs2)
-RUN wget https://github.com/vertigobr/commonui-bs2/archive/master.zip && \
+RUN wget https://github.com/AtlasOfLivingAustralia/commonui-bs2/archive/master.zip && \
     unzip master.zip && \
     mv commonui-bs2-master /usr/share/nginx/html/commonui-bs2 && \
     rm master.zip
