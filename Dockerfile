@@ -1,5 +1,5 @@
 FROM node as builder
-
+# builds commonui-bs3-2019 - maybe unnecessary?
 RUN cd /opt && \
     git clone --recurse-submodules https://github.com/AtlasOfLivingAustralia/commonui-bs3-2019.git && \
     cd commonui-bs3-2019 && \
